@@ -1,5 +1,10 @@
 import React from 'react';
 import Slider from "react-slick";
+import ImageOne from '../images/kickoff.jpg' 
+import ImageTwo from '../images/nadidips.jpg'
+import ImageThree from '../images/taming.jpg'  
+import ImageFour from '../images/bloomberg.JPG' 
+import ImageFive from '../images/group.JPG' 
 
 class Events extends React.Component {
     render () {
@@ -13,30 +18,36 @@ class Events extends React.Component {
           return (
             <div className="events">
             <center>
-            <center><h1 className = "header"> Events </h1></center>
-            </center>
-           
+            <h1 className = "header"> Events </h1>
+        
             <Slider {...settings}>
               <div>
-                <center><h3>1</h3></center>
+                <img id ="ImageOne" src={ImageOne} alt="kickoff" />
+                <h3 className = "tag"> #KickoffMeeting ✅ </h3>
               </div>
               <div>
-                <h3>2</h3>
+                <img id ="ImageTwo" src={ImageTwo} alt="nadidips" />
+                <h3 className = "tag"> #WomenWhoCode 🔥🔥 </h3>
               </div>
               <div>
-                <h3>3</h3>
+                <img id ="ImageThree" src={ImageThree} alt="taming" />
+                <h3 className = "tag"> #TamingCSS 🐍 </h3>
               </div>
               <div>
-                <h3>4</h3>
+                <img id ="ImageFour" src={ImageFour} alt="bloomberg" />
+                <h3 className = "tag"> #BloombergTalks 0️⃣1️⃣0️⃣ </h3>
               </div>
               <div>
-                <h3>5</h3>
+                <img id ="ImageFive" src={ImageFive} alt="group" />
+                <h3 className = "tag"> #FullStackDevelopers 💥</h3>
               </div>
-              <div>
-                <h3>6</h3>
-              </div>
-            </Slider>
+            </Slider> 
+
+            <br />     
+            <a class= "a" href ="/">↩️</a>
+            </center>
             </div>
+            
           );
         }
       }

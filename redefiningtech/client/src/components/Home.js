@@ -26,13 +26,19 @@ class Home extends React.Component {
         return (
                 <div className="spinner">
                     <center><img className ="img" src={Spinner} alt="Spinner" />
-                    <h1 className = "header"> Welcome to ReDefiNing Tech </h1></center>
+                    <h1 className = "header"> Welcome to ReDefiNing Tech </h1>
                     
-                    <center><a class= "a" href ="/AboutUs">About Us</a></center>
+                    <p> // ================= //</p>
+
+                    <p><a class= "a" href ="/AboutUs">About Us</a></p>
+
+                    <p><a class= "a" href ="/Events">Events</a></p>
                     
-                    <center><a class= "a" href ="/Events">Events</a></center>
-                    
-                    <center><a class= "a" href ="/ContactUs">Contact Us</a></center>
+                    <p><a class= "a" href ="/ContactUs">Contact Us</a></p>
+
+                    <p> // ================= //</p>
+
+                    </center>
                 </div>
         )
     }

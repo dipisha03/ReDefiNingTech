@@ -1,15 +1,22 @@
 import React from 'react'
 import Logo from '../images/logo.png' 
-// import { Button} from 'react-bootstrap';
 
 const AboutUs = () => {
     return (
-        <div className="aboutus">
+        <div className="row">
+
+        {/* Animation not working */}
+        <div className="column left">
             <center>
-            <img className ="logo" src={Logo} alt="Logo" />
+            <img className ="animate" src={Logo} alt="Logo" />
+            </center>
+        </div>
+
+        <div className="column middle">
+            <center>
                 <h1 className = "header"> About Us </h1>
                     <p> 
-                        We are an aspiring group of developers who met at the Rutgers Coding Bootcamp and
+                        We are an ambitious group of developers who met at the Rutgers Coding Bootcamp and
                     </p>
                     <p>
                         came together to create a learning platform that focuses on hosting tech talks  
@@ -35,7 +42,17 @@ const AboutUs = () => {
                     <p> <b className = "values">Ambition</b> - people who are driven to succeed </p>
                     <p> <b className = "values">Collaboration</b> - people who can collaborate with others well </p>
                     <p> <b className = "values">Innovation </b> - people who encourage and share creativity </p>
+
+                <br />
+                <a class= "a" href ="/">↩️</a>
             </center>
+        </div>
+
+        <div className="column right">
+            <center>
+                <img className ="animate" src={Logo} alt="Logo" />
+            </center>
+        </div>
         </div>
     )
 }
