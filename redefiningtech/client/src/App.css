@@ -35,8 +35,7 @@ html, body {
   margin-top: 5%;
 }
 
-.animate {
-  animation: 0.8s jackInTheBox ease;
+.logo {
   width: 18%;
   height: 20%;
 }

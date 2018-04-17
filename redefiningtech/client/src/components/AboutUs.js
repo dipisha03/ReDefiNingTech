@@ -5,10 +5,10 @@ const AboutUs = () => {
     return (
         <div className="row">
 
-        {/* Animation not working */}
         <div className="column left">
+
             <center>
-            <img className ="animate" src={Logo} alt="Logo" />
+            <img className ="animated infinite jello logo" src={Logo} alt="Logo" />
             </center>
         </div>
 
@@ -50,7 +50,7 @@ const AboutUs = () => {
 
         <div className="column right">
             <center>
-                <img className ="animate" src={Logo} alt="Logo" />
+                <img className ="animated infinite jello logo" src={Logo} alt="Logo" />
             </center>
         </div>
         </div>
