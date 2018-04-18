@@ -7,8 +7,8 @@ const dotenv = require("dotenv").config();
 // Middleware setups
 app.use(express.static(path.join(__dirname, "client", "build")))
 
-// Database setup 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/redefiningtech")
+// // Database setup 
+// const MONGODB_URI = mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/redefiningtech")
 
 // Right before your app.listen(), add this:
 app.get("*", (req, res) => {  

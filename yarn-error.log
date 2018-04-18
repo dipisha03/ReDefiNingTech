@@ -19,12 +19,17 @@ npm manifest:
     "version": "1.0.0",
     "description": "Mern Demo",
     "main": "server.js",
+    "proxy": "http://localhost:3001",
     "scripts": {
       "server": "node server.js",
       "client": "node scripts/start-client.js",
       "start": "concurrently \"nodemon server.js\" \"npm run client\"",
       "build": "node scripts/build.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    },
+    "engines": {
+      "node": "8.9.2"
     },
     "author": "",
     "license": "ISC",
@@ -35,6 +40,7 @@ npm manifest:
     "dependencies": {
       "animate.css": "^3.6.1",
       "bootstrap": "^3.3.7",
+      "dotenv": "^5.0.1",
       "express": "^4.15.4",
       "mongodb": "^3.0.5",
       "mongoose": "^5.0.13",
@@ -7324,9 +7330,11 @@ Trace:
   Error: Found incompatible module
       at MessageError.Error (native)
       at new MessageError (C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
-      at checkOne (C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:62444:11)
-      at Object.check (C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:62463:5)
-      at C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:22803:73
+      at Object.checkOne (C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:62444:11)
+      at C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:22773:75
       at next (native)
       at step (C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
-      at C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
+      at C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:116:14
+      at Promise.F (C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:23451:28)
+      at C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:95:12
+      at C:\Users\Dips\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:22777:27
