@@ -2,16 +2,17 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const dotenv = require("dotenv").config();
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// Middleware setups
+app.use(express.static(path.join(__dirname, "client", "build")))
 
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// Database setup 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/redefiningtech")
+
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {  
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, function() {
